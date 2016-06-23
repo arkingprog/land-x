@@ -1,0 +1,226 @@
+$accentColor: #0199e6;
+$textBoldColor: #323232;
+$textColorGrey: #727272;
+.container {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.blue {
+  font-weight: bold;
+  color: $accentColor;
+}
+
+.line {
+  width: 70px;
+  height: 0;
+  margin: 30px 0;
+  border: 1px solid $accentColor;
+
+}
+
+.dbg {
+  background: rgba(0, 10, 15, 0.85);
+  height: 100%;
+}
+
+.header {
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  height: 750px;
+  background: url("/land-x/img/header-bg.jpg");
+  &--top {
+    height: 75px;
+    background-color: #ffffff;
+  }
+  &--logo {
+    padding: 25px 10px;
+  }
+  &--nav {
+    ul li {
+      display: inline;
+      font-family: 'Raleway', sans-serif;
+      margin-right: 25px;
+
+      a {
+        font-size: 14px;
+        text-decoration: none;
+        font-weight: bold;
+        color: $textBoldColor;
+        text-transform: uppercase;
+        &:hover {
+          color: $accentColor;
+        }
+        transition: all 0.2s;
+      }
+    }
+  }
+  &--middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-h1 {
+      margin-top: 160px;
+      margin-bottom: 40px;
+      font-size: 45px;
+      color: #fff;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 400;
+    }
+    &-subtitle {
+      font-size: 20px;
+      font-family: 'Source Sans Pro', sans-serif;
+      margin-bottom: 75px;
+      color: #fff;
+      max-width: 700px;
+      text-align: center;
+    }
+
+    &-form {
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+    }
+    &-input {
+      width: 215px;
+      height: 50px;
+      border: 1px solid $accentColor;
+      border-radius: 5px;
+      border-left: 4px solid $accentColor;
+      background: #000;
+      color: #fff;
+      margin-right: 20px;
+      text-indent: 20px;
+      &_btn {
+        color: #fff;
+        height: 50px;
+        width: 185px;
+        border-radius: 5px;
+        background: $accentColor;
+        border: none;
+        padding: 0;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+    }
+
+  }
+}
+
+.brief-bg {
+  background-color: #f7f8fa;
+}
+
+.brief-right {
+  padding: 100px 0;
+  display: flex;
+  justify-content: space-around;
+
+  &--img {
+    margin: 0 30px 0 15px;
+  }
+  &--left {
+    &-item {
+      display: flex;
+    }
+    &-h2 {
+      font-family: 'Raleway', sans-serif;
+      color: $textBoldColor;
+      font-size: 35px;
+      margin: 0;
+    }
+    &-subtitle {
+      color: $textColorGrey;
+      font-size: 16px;
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+  }
+  &--info {
+    width: 50%;
+    margin: 0 15px;
+  }
+  &--left-item {
+    margin-top: 45px;
+    &_icon {
+      width: 30px;
+      height: 30px;
+      margin: 0 15px 0 0;
+    }
+    &_title {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      margin: 0 0 15px 0;
+      color: $textBoldColor;
+    }
+    &_text {
+      line-height: 25px;
+      color: $textColorGrey;
+      font-family: 'Source Sans Pro', sans-serif;
+    }
+  }
+
+}
+
+.features {
+  width: 100%;
+  padding: 100px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-h2{
+      font-size: 35px;
+      font-family:'Raleway', sans-serif;
+      font-weight:500;
+      margin: 0;
+      color: $textBoldColor;
+    }
+    & .line{
+      margin: 25px 0;
+    }
+    &-subtitle{
+      font-family:'Source Sans Pro', sans-serif;
+      color: $textColorGrey;
+    }
+
+
+  }
+  &--content{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 100%;
+    &-item{
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: auto;
+      margin-top: 80px;
+      &_img{
+        height:50px;
+        width: 50px;
+        margin-bottom: 40px;
+      }
+      &_title{
+        font-family:'Raleway', sans-serif;
+        font-size: 20px;
+        font-weight:500;
+        margin-bottom: 30px;
+      }
+      &_text{
+        text-align: center;
+        font-family:'Raleway', sans-serif;
+        color: $textColorGrey;
+      }
+    }
+  }
+}
