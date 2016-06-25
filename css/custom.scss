@@ -1,3 +1,5 @@
+@import "font-awesome-4.6.3/scss/font-awesome";
+
 $accentColor: #0199e6;
 $textBoldColor: #323232;
 $textColorGrey: #727272;
@@ -6,8 +8,12 @@ $textColorGrey: #727272;
   margin: 0 auto;
 }
 
-.blue {
+.blue-blod {
   font-weight: bold;
+  color: $accentColor;
+}
+
+.blue {
   color: $accentColor;
 }
 
@@ -17,6 +23,9 @@ $textColorGrey: #727272;
   margin: 30px 0;
   border: 1px solid $accentColor;
 
+}
+.bg {
+  background-color: #f7f8fa;
 }
 
 .dbg {
@@ -111,11 +120,7 @@ $textColorGrey: #727272;
 
   }
 }
-
-.brief-bg {
-  background-color: #f7f8fa;
-}
-
+ 
 .brief-right {
   padding: 100px 0;
   display: flex;
@@ -176,51 +181,162 @@ $textColorGrey: #727272;
     display: flex;
     flex-direction: column;
     align-items: center;
-    &-h2{
+    &-h2 {
       font-size: 35px;
-      font-family:'Raleway', sans-serif;
-      font-weight:500;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 500;
       margin: 0;
       color: $textBoldColor;
     }
-    & .line{
+    & .line {
       margin: 25px 0;
     }
-    &-subtitle{
-      font-family:'Source Sans Pro', sans-serif;
+    &-subtitle {
+      font-family: 'Source Sans Pro', sans-serif;
       color: $textColorGrey;
     }
 
-
   }
-  &--content{
+  &--content {
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
     width: 100%;
-    &-item{
+    &-item {
       width: 30%;
       display: flex;
       flex-direction: column;
       align-items: center;
       margin: auto;
       margin-top: 80px;
-      &_img{
-        height:50px;
+      &_img {
+        height: 50px;
         width: 50px;
         margin-bottom: 40px;
       }
-      &_title{
-        font-family:'Raleway', sans-serif;
+      &_title {
+        font-family: 'Raleway', sans-serif;
         font-size: 20px;
-        font-weight:500;
+        font-weight: 500;
         margin-bottom: 30px;
       }
-      &_text{
+      &_text {
         text-align: center;
-        font-family:'Raleway', sans-serif;
+        font-family: 'Raleway', sans-serif;
         color: $textColorGrey;
       }
     }
   }
 }
+
+.pricing {
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--header {
+    &-h2 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 35px;
+      font-weight: 500;
+      color: $textBoldColor;
+    }
+    &-subtitle {
+      color: $textColorGrey;
+      font-size: 17px;
+      font-family: 'Source Sans Pro', sans-serif;
+      margin-bottom: 50px;
+
+    }
+  }
+  &--table {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    &-item {
+      background: #fff;
+      width: 30%;
+      &_header {
+        background-color: $textBoldColor;
+        border-radius: 2px;
+        height: 100px;
+        .item_header {
+          &-title {
+            font-family: 'Raleway', sans-serif;
+            text-align: center;
+            font-size: 24px;
+            color: #fff;
+            font-weight: 400;
+            padding: 20px 0 10px;
+          }
+          &-price {
+            text-align: center;
+            color: #fff;
+            font-family: 'Source Sans Pro', sans-serif;
+          }
+        }
+      }
+      &_features {
+        .item_features-item {
+          display: flex;
+          justify-content: space-between;
+          border-bottom: 1px dotted $textColorGrey;
+          & .item-text, .item-value {
+            padding: 20px 30px;
+            color: $textColorGrey;
+          }
+        }
+      }
+      &_footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 15px 30px;
+        .item_footer {
+          &-price {
+            font-size: 18px;
+            color: $textColorGrey;
+          }
+          &-button {
+            width: 100px;
+            height: 40px;
+            line-height:40px;
+            color: $textColorGrey;
+            border: 1px solid $textColorGrey;
+            border-radius: 5px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight:bold;
+          }
+        }
+      }
+    }
+    &-item:hover {
+      .pricing--table-item_header {
+        background-color: $accentColor;
+        & .item_header-price .blue {
+          color: #fff;
+          transition: all 0.1s;
+        }
+      }
+      .pricing--table-item_footer{
+        & .item_footer-price{
+          color: #000;
+          transition: all 0.1s;
+        }
+        & .item_footer-button{
+          background-color: $accentColor;
+          border-color: $accentColor;
+          color: #fff;
+          transition: all 0.1s;
+
+        }
+      }
+
+    }
+    //add hover effect to button
+  }
+}
+
+
+
